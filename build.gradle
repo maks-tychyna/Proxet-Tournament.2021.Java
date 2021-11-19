@@ -10,6 +10,10 @@ repositories {
 }
 
 dependencies {
+    implementation 'com.opencsv:opencsv:5.5.2'
+
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
 
     testImplementation 'junit:junit:4.12'
 }

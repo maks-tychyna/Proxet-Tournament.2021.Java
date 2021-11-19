@@ -1,20 +1,24 @@
 package proxet.tournament.generator.dto;
 
-public class Player {
+import static java.lang.Integer.compare;
 
-    private final String nickname;
-    private final int vehicleType;
+import com.opencsv.bean.CsvBindByPosition;
+import lombok.Data;
 
-    public Player(String nickname, int vehicleType) {
-        this.nickname = nickname;
-        this.vehicleType = vehicleType;
-    }
+@Data
+public class Player implements Comparable<Player> {
 
-    public String getNickname() {
-        return nickname;
-    }
+    @CsvBindByPosition(position = 0)
+    private String nickname;
 
-    public int getVehicleType() {
-        return vehicleType;
+    @CsvBindByPosition(position = 1)
+    private int waitTime;
+
+    @CsvBindByPosition(position = 2)
+    private int vehicleType;
+
+    @Override
+    public int compareTo(Player other) {
+        return compare(waitTime, other.waitTime);
     }
 }
