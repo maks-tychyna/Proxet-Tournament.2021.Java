@@ -1,0 +1,15 @@
+management:
+  endpoint:
+    health:
+      show-details: always
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=lobby
+    username: #TODO UPDATE HERE
+    password: #TODO UPDATE HERE
+  jpa:
+    properties:
+      hibernate:
+        generate_statistics: true
+    show-sql: true

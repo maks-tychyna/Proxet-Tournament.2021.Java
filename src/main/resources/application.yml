@@ -1,0 +1,71 @@
+# APPLICATION
+api:
+  version: v1
+
+# ACTUATOR
+management:
+  endpoints:
+    enabled-by-default: false
+    web:
+      base-path: /api/${api.version}
+      exposure.include: health
+      path-mapping:
+        health: healthcheck
+  endpoint:
+    health:
+      enabled: true
+  health:
+    defaults:
+      enabled: false
+    db:
+      enabled: true
+
+# SERVER
+server:
+  port: 8080
+  ssl:
+    enabled: false
+  error:
+    whitelabel.enabled: false
+
+#SPRING
+spring:
+  jackson:
+    default-property-inclusion: non_null
+  web:
+    resources.add-mappings: false
+  mvc:
+    throw-exception-if-no-handler-found: true
+    servlet:
+      load-on-startup: 1
+  jpa:
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: false
+    open-in-view: false
+    properties:
+      hibernate:
+        default_schema: lobby
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 40
+      minimum-idle: 5
+      connection-timeout: 300000
+      leak-detection-threshold: 0
+
+# SWAGGER
+springdoc:
+  api-docs:
+    path: /api/docs
+  swagger-ui:
+    path: /api/swagger
+
+# LOGGING
+logging:
+  level:
+    root: info

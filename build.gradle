@@ -1,15 +1,51 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '2.5.5'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'com.github.sherter.google-java-format' version '0.9'
 }
 
 group 'proxet.tournament'
 version '1.0.0'
+sourceCompatibility = '11'
+
+bootJar {
+    archiveFileName = "${archiveBaseName.get()}.${archiveExtension.get()}"
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'com.vladmihalcea:hibernate-types-52:2.10.4'
+    implementation 'org.flywaydb:flyway-core'
+    implementation 'org.springdoc:springdoc-openapi-ui:1.5.7'
+    implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+    runtimeOnly 'org.postgresql:postgresql:42.2.20'
+    runtimeOnly 'com.h2database:h2'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntime 'com.h2database:h2'
 }
+
+test {
+    useJUnitPlatform()
+    environment 'SPRING_PROFILES_ACTIVE', 'test'
+
+    testLogging {
+        events 'failed'
+        exceptionFormat 'full'
+    }
+}
+
+compileJava.dependsOn 'googleJavaFormat'
+check.dependsOn 'googleJavaFormat'

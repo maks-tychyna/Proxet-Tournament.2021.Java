@@ -1,4 +1,4 @@
-FROM gradle:6.3.0-jdk11 AS build
+FROM gradle:6.9.1-jdk11 AS build
 ENV APP_HOME=/app/
 WORKDIR $APP_HOME
 COPY . .

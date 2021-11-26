@@ -4,3 +4,11 @@ services:
     build:
       context: .
       target: test
+  postgres:
+    image: postgres:13.3
+    environment:
+      POSTGRES_DB: "test"
+      POSTGRES_USER: "test"
+      POSTGRES_PASSWORD: "test"
+    ports:
+      - "5432:5432"

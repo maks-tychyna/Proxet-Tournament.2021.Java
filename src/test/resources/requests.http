@@ -1,0 +1,164 @@
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel#%",
+  "vehicleType": 1
+}
+
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel$-",
+  "vehicleType": 2
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel}@",
+  "vehicleType": 3
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel#%1",
+  "vehicleType": 1
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel$-1",
+  "vehicleType": 2
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel}@1",
+  "vehicleType": 3
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel#%2",
+  "vehicleType": 1
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel$-2",
+  "vehicleType": 2
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel}@2",
+  "vehicleType": 3
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel#%3",
+  "vehicleType": 1
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel$-3",
+  "vehicleType": 2
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel}@3",
+  "vehicleType": 3
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel#%4",
+  "vehicleType": 1
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel$-4",
+  "vehicleType": 2
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel}@4",
+  "vehicleType": 3
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel#%5",
+  "vehicleType": 1
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel$-5",
+  "vehicleType": 2
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel}@5",
+  "vehicleType": 3
+}
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel#%6",
+  "vehicleType": 1
+}
+
+
+#####
+POST http://localhost:8080/api/v1/lobby
+Content-Type: application/json
+
+{
+  "nickname": "##Abel$-6",
+  "vehicleType": 2
+}
+
+
